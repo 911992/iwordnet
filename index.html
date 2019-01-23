@@ -1,0 +1,127 @@
+<?DOCTYPE html?>
+<html>
+<!-- document on Jan 21, 2019 @ 9AM / author(the only dev): Arashi-->
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>iWordnet - Visual English Thesaurus App</title>
+  <meta name="keyword" content="english, dictionary, thesaurus, wordnet, visualization, visual, graph, learn">
+  <meta name="description" content="iWordnet is a rich visual English iOS app. Based on Princeton University Wordent Project.">
+  <link rel="canonical" href="./index.html" />
+  <link rel="stylesheet" type="text/css" href="_face.css">
+  <script>
+    var cols = ['4e61fd', 'f344f3', '76fb39', 'ffdf00'];
+    var fnts = ['sans-serif', 'Tahoma', 'Verdana', 'serif', 'monospaced', 'fantasy', 'cursive'];
+    function IWN_txt_cool() {
+      var rc = function () { return cols[Math.floor(Math.random() * cols.length)]; };
+      var fc = rc();
+      var sc0 = rc();
+      var sc1 = rc();
+      console.log(fc);
+      console.log(sc0);
+      console.log(sc1);
+      var el = document.getElementById('_IWN_name_');
+      el.style.color = '#' + fc;
+      el.style.textShadow = '0px 0px 1px black,0px 0px 10px #' + sc0 + ', 0px 0px 20px #' + sc1;
+      // el.style.fontFamily=fnts[Math.floor(Math.random()*fnts.length)];;
+      console.log(el);
+    }
+    function page_up() {
+      IWN_txt_cool();
+      // setTimeout(IWN_txt_cool,1024);
+    }
+    function IWN_logo_shift() {
+      var el = document.getElementById('IWN_logo');
+      el.style.filter = 'hue-rotate(' + (Math.random() * (Math.PI * 2)) + 'rad)';//quick math
+    }
+  </script>
+</head>
+
+<body id="fixed_bg" onload="javascript:page_up()">
+
+  <header>
+  </header>
+
+  <section id="showcase">
+    <div class="container">
+      <img onclick="javascript:IWN_logo_shift()" id="IWN_logo" width="256px" height="auto" alt="iWordnet logo" src="./logo_trans_back_512_border.png">
+      <br>
+      <h1 id="_IWN_name_" onclick="javascript:IWN_txt_cool()" style="color: rgb(243, 68, 243); text-shadow: black 0px 0px 1px, rgb(255, 223, 0) 0px 0px 10px, rgb(255, 223, 0) 0px 0px 20px;">iWordnet</h1><br>
+      <p style="font-size: large">Visual English Thesaurus App</p>
+    </div>
+  </section>
+
+  <section id="dl_sec">
+    <img width="256px" height="auto" alt="download on the AppStore" src="./badge_512.png">
+
+  </section>
+
+  <section class="showcase" id="boxes">
+    <div class="container">
+      <div class="box">
+        <img alt="agenda icon" src="./agenda.png" class="icon">
+        <h2 class="h2_title" style="
+      color: #f246fa;
+  ">Rich Content</h2>
+        <p class="boxp">iWordnet carries a copy of <a href="https://wordnet.princeton.edu/" href="a large lexical English database (external link)">Princeton
+            University
+            Wordnet↗</a> V3.1 in heart.</p>
+      </div>
+      <div class="box">
+        <img alt="graph icon" src="./network.png" class="icon">
+        <h2 class="h2_title" style="
+      color: #4e5ffe;
+  ">Visualization</h2>
+        <p class="boxp">Learn English thesaurus much easier with a managed and smart word graph</p>
+      </div>
+      <div class="box">
+        <img alt="theme icon" src="./stt_paint-palette-and-brush.png" class="icon">
+        <h2 class="h2_title" style="
+      color: #74fb3a;
+  ">Cool User Interface</h2>
+        <p class="boxp">Select your favorite theme from a list of great ones!</p>
+      </div>
+      <div class="box">
+        <img alt="style icon" src="./style.png" class="icon">
+        <h2 class="h2_title" style="
+      color: #e5c700;
+  ">Customizable Styles</h2>
+        <p class="boxp">Customizable text, edge, and node styles allow you to make the user interface even more fun!</p>
+      </div>
+
+      <div class="box">
+        <img alt="speech icon" src="./speaker-5.png" class="icon" />
+        <h2 class="h2_title" style="
+      color: #ff9200;
+  ">Text To Speech</h2>
+        <p>System generated text to speech when pronunciation matter <sup title="May need an internet connection" style="font-size: xx-small; cursor: help">[1]</sup></p>
+      </div>
+
+      <div class="box">
+        <img alt="premium icon" src="./diamond.png" class="icon" />
+        <h2 class="h2_title" style="
+            color: #5be5fe;
+        ">Full Content</h2>
+        <p>Subscribe full data, and unlock features for ultimate learning experience</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="soc_sec">
+    <h3>Follow us</h3>
+    <a href="https://twitter.com/iWordnet"><img alt="twitter icon" src="./sst_twitter.png" class="icon" /></a>
+  </section>
+
+  <section class="showcase">
+    <h2>Screenshots</h2> Soon...
+  </section>
+
+  <footer>
+    <p style="padding: 0px">Copyright © 2017-2019 <a href="./arashi.html">Arash M. Dehghani</a>. All rights reserved.</p>
+    <p style="padding: 0px"><a href="./cp_lic_att.html">Copyright, Licenses, and attributions</a></p>
+  </footer>
+
+</body>
+
+</html>
