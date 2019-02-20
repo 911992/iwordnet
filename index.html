@@ -6,15 +6,156 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>iWordnet - Visual English Thesaurus App</title>
   <meta name="keyword" content="english, dictionary, thesaurus, wordnet, visualization, visual, graph, learn">
-  <meta name="description" content="iWordnet is a rich visual English iOS app. Based on Princeton University Wordent Project.">
+  <meta name="description"
+    content="iWordnet is a rich visual English iOS app. Based on Princeton University Wordent Project.">
   <link rel="canonical" href="./index.html" />
   <link rel="stylesheet" type="text/css" href="./face.css">
   <link rel="icon" href="./logo_trans_back_512_border.png" type="image/gif" sizes="16x16">
   <script>
     var cols = ['4e61fd', 'f344f3', '76fb39', 'ffdf00'];
     var fnts = ['sans-serif', 'Tahoma', 'Verdana', 'serif', 'monospaced', 'fantasy', 'cursive'];
+    var iphone_folder = "web_screens_feb_2019_x/";
+    var iphone_folder_org = "web_screens_feb_2019_x/iphone_org_sizee/"
+    var iphone_names_small = ["Simulator Screen Shot - iPhone XR - 2019-02-15 at 00.26.02 (Custom).png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-15 at 00.26.26 (Custom).png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-15 at 00.26.30 (Custom).png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-15 at 00.26.36 (Custom).png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-15 at 00.26.40 (Custom).png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-15 at 00.26.47 (Custom).png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-15 at 00.27.10 (Custom).png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-15 at 00.27.29 (Custom).png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-15 at 00.27.34 (Custom).png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-15 at 00.28.05 (Custom).png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-15 at 00.28.23 (Custom).png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-15 at 00.29.20 (Custom).png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-15 at 00.29.24 (Custom).png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-15 at 00.29.38 (Custom).png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.16.57 (Custom).png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.42.16 (Custom).png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.43.11 (Custom).png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.43.23 (Custom).png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.43.56 (Custom).png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.44.21 (Custom).png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.45.01 (Custom).png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.45.26 (Custom).png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.45.32 (Custom).png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.46.57 (Custom).png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.47.30 (Custom).png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.47.57 (Custom).png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.48.16 (Custom).png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.48.38 (Custom).png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.49.32 (Custom).png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.49.46 (Custom).png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.50.01 (Custom).png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.52.43 (Custom).png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.53.03 (Custom).png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.53.14 (Custom).png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.53.32 (Custom).png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.53.41 (Custom).png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.53.47 (Custom).png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.54.37 (Custom).png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-20 at 16.22.08 (Custom).png"
+    ];
+    var iphone_names_full = [
+      "Simulator Screen Shot - iPhone XR - 2019-02-15 at 00.26.02.png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-15 at 00.26.26.png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-15 at 00.26.30.png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-15 at 00.26.36.png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-15 at 00.26.40.png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-15 at 00.26.47.png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-15 at 00.27.10.png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-15 at 00.27.29.png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-15 at 00.27.34.png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-15 at 00.28.05.png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-15 at 00.28.23.png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-15 at 00.29.20.png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-15 at 00.29.24.png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-15 at 00.29.38.png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.16.57.png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.42.16.png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.43.11.png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.43.23.png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.43.56.png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.44.21.png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.45.01.png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.45.26.png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.45.32.png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.46.57.png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.47.30.png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.47.57.png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.48.16.png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.48.38.png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.49.32.png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.49.46.png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.50.01.png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.52.43.png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.53.03.png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.53.14.png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.53.32.png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.53.41.png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.53.47.png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-19 at 20.54.37.png",
+      "Simulator Screen Shot - iPhone XR - 2019-02-20 at 16.22.08.png"
+    ];
+
+    //////ipadddd
+    var ipad_folder = "web_screens_feb_2019/iPad/";
+    var ipad_folder_org = "web_screens_feb_2019/iPad/org_size/"
+    var ipad_names_small = ["Simulator Screen Shot - iPad Air - 2019-02-19 at 21.10.19 (Custom).png",
+      "Simulator Screen Shot - iPad Air - 2019-02-19 at 21.10.37 (Custom).png",
+      "Simulator Screen Shot - iPad Air - 2019-02-19 at 21.12.27 (Custom).png",
+      "Simulator Screen Shot - iPad Air - 2019-02-19 at 21.49.49 (Custom).png",
+      "Simulator Screen Shot - iPad Air - 2019-02-20 at 00.33.27 (Custom).png",
+      "Simulator Screen Shot - iPad Air - 2019-02-20 at 00.34.23 (Custom).png",
+      "Simulator Screen Shot - iPad Air - 2019-02-20 at 00.34.30 (Custom).png",
+      "Simulator Screen Shot - iPad Air - 2019-02-20 at 00.34.51 (Custom).png",
+      "Simulator Screen Shot - iPad Air - 2019-02-20 at 00.35.26 (Custom).png",
+      "Simulator Screen Shot - iPad Air - 2019-02-20 at 00.35.35 (Custom).png",
+      "Simulator Screen Shot - iPad Air - 2019-02-20 at 00.35.39 (Custom).png",
+      "Simulator Screen Shot - iPad Air - 2019-02-20 at 00.35.57 (Custom).png",
+      "Simulator Screen Shot - iPad Air - 2019-02-20 at 00.36.05 (Custom).png",
+      "Simulator Screen Shot - iPad Air - 2019-02-20 at 00.37.23 (Custom).png",
+      "Simulator Screen Shot - iPad Air - 2019-02-20 at 00.38.02 (Custom).png",
+      "Simulator Screen Shot - iPad Air - 2019-02-20 at 00.38.16 (Custom).png",
+      "Simulator Screen Shot - iPad Air - 2019-02-20 at 00.38.44 (Custom).png",
+      "Simulator Screen Shot - iPad Air - 2019-02-20 at 00.39.32 (Custom).png",
+      "Simulator Screen Shot - iPad Air - 2019-02-20 at 00.39.41 (Custom).png",
+      "Simulator Screen Shot - iPad Air - 2019-02-20 at 00.39.51 (Custom).png",
+      "Simulator Screen Shot - iPad Air - 2019-02-20 at 00.40.00 (Custom).png",
+      "Simulator Screen Shot - iPad Air - 2019-02-20 at 00.40.12 (Custom).png",
+      "Simulator Screen Shot - iPad Air - 2019-02-20 at 00.40.19 (Custom).png",
+      "Simulator Screen Shot - iPad Air - 2019-02-20 at 00.40.26 (Custom).png"];
+    var ipad_names_full = ["Simulator Screen Shot - iPad Air - 2019-02-19 at 21.10.19.png",
+      "Simulator Screen Shot - iPad Air - 2019-02-19 at 21.10.37.png",
+      "Simulator Screen Shot - iPad Air - 2019-02-19 at 21.12.27.png",
+      "Simulator Screen Shot - iPad Air - 2019-02-19 at 21.49.49.png",
+      "Simulator Screen Shot - iPad Air - 2019-02-20 at 00.33.27.png",
+      "Simulator Screen Shot - iPad Air - 2019-02-20 at 00.34.23.png",
+      "Simulator Screen Shot - iPad Air - 2019-02-20 at 00.34.30.png",
+      "Simulator Screen Shot - iPad Air - 2019-02-20 at 00.34.51.png",
+      "Simulator Screen Shot - iPad Air - 2019-02-20 at 00.35.26.png",
+      "Simulator Screen Shot - iPad Air - 2019-02-20 at 00.35.35.png",
+      "Simulator Screen Shot - iPad Air - 2019-02-20 at 00.35.39.png",
+      "Simulator Screen Shot - iPad Air - 2019-02-20 at 00.35.57.png",
+      "Simulator Screen Shot - iPad Air - 2019-02-20 at 00.36.05.png",
+      "Simulator Screen Shot - iPad Air - 2019-02-20 at 00.37.23.png",
+      "Simulator Screen Shot - iPad Air - 2019-02-20 at 00.37.57.png",
+      "Simulator Screen Shot - iPad Air - 2019-02-20 at 00.38.02.png",
+      "Simulator Screen Shot - iPad Air - 2019-02-20 at 00.38.16.png",
+      "Simulator Screen Shot - iPad Air - 2019-02-20 at 00.38.44.png",
+      "Simulator Screen Shot - iPad Air - 2019-02-20 at 00.39.32.png",
+      "Simulator Screen Shot - iPad Air - 2019-02-20 at 00.39.41.png",
+      "Simulator Screen Shot - iPad Air - 2019-02-20 at 00.39.51.png",
+      "Simulator Screen Shot - iPad Air - 2019-02-20 at 00.40.00.png",
+      "Simulator Screen Shot - iPad Air - 2019-02-20 at 00.40.12.png",
+      "Simulator Screen Shot - iPad Air - 2019-02-20 at 00.40.19.png",
+      "Simulator Screen Shot - iPad Air - 2019-02-20 at 00.40.26.png"];
+    function __rand_c() {
+      return cols[Math.floor(Math.random() * cols.length)];
+    }
     function IWN_txt_cool() {
-      var rc = function () { return cols[Math.floor(Math.random() * cols.length)]; };
+      // var rc = function () { return cols[Math.floor(Math.random() * cols.length)]; };
+      var rc = __rand_c;
       var fc = rc();
       var sc0 = rc();
       var sc1 = rc();
@@ -30,12 +171,63 @@
     function page_up() {
       IWN_txt_cool();
       // setTimeout(IWN_txt_cool,1024);
+      go_screens();
+    }
+    function go_screens() {
+      var cnt = document.getElementById("___IWN_SCREEN_CN");
+      var sz = iphone_names_small.length;
+      var st = "_iwn_screen_img";
+      // var _draw_fn = function (sz, st, folder0, folder1, arr0, arr1, cnt1)
+      var _draw_fn = function (sz, st, folder0, arr0, folder1, arr1, cnt1) {
+        for (var a = 0; a < sz; a++) {
+          var EL = document.createElement("img");
+          // EL.setAttribute("class", st);
+          // EL.className = st;
+          EL.classList.add(st);
+          EL.classList.add("lozad");
+          // EL.setAttribute("data-src", iphone_folder + iphone_names_small[a]);
+          // EL.setAttribute("src", iphone_folder + iphone_names_small[a]);
+          EL.setAttribute("data-src", folder0 + arr0[a]);
+          EL.style.borderColor = '#' + __rand_c();
+
+          var AE = document.createElement("a");
+          AE.setAttribute("href", folder1 + arr1[a]);
+          AE.classList.add('_iwn_screen_a');
+          AE.appendChild(EL);
+          cnt1.appendChild(AE);
+        }
+      };
+      _draw_fn(sz, st, iphone_folder, iphone_names_small, iphone_folder_org, iphone_names_full, cnt);
+      // for (var a = 0; a < sz; a++) {
+      //   var EL = document.createElement("img");
+      //   // EL.setAttribute("class", st);
+      //   // EL.className = st;
+      //   EL.classList.add(st);
+      //   EL.classList.add("lozad");
+      //   EL.setAttribute("data-src", iphone_folder + iphone_names_small[a]);
+      //   // EL.setAttribute("src", iphone_folder + iphone_names_small[a]);
+      //   EL.style.borderColor = '#' + __rand_c();
+
+      //   var AE = document.createElement("a");
+      //   AE.setAttribute("href", iphone_folder_org + iphone_names_full[a]);
+      //   AE.classList.add('_iwn_screen_a');
+      //   AE.appendChild(EL);
+      //   cnt.appendChild(AE);
+      // }
+
+      cnt = document.getElementById("___IWN_SCREEN_CN_IP");
+      sz = ipad_names_small.length;
+      _draw_fn(sz, st, ipad_folder, ipad_names_small, ipad_folder_org, ipad_names_full, cnt);
+
+      const observer = lozad();
+      observer.observe();
     }
     function IWN_logo_shift() {
       var el = document.getElementById('IWN_logo');
       el.style.filter = 'hue-rotate(' + (Math.random() * (Math.PI * 2)) + 'rad)';//quick math
     }
   </script>
+  <script src="lozad.js"></script>
 </head>
 
 <body id="fixed_bg" onload="javascript:page_up()">
@@ -45,9 +237,12 @@
 
   <section id="showcase">
     <div class="container">
-      <img onclick="javascript:IWN_logo_shift()" id="IWN_logo" width="256px" height="auto" alt="iWordnet logo" src="./logo_trans_back_512_border.png">
+      <img onclick="javascript:IWN_logo_shift()" id="IWN_logo" width="256px" height="auto" alt="iWordnet logo"
+        src="./logo_trans_back_512_border.png">
       <br>
-      <h1 id="_IWN_name_" onclick="javascript:IWN_txt_cool()" style="color: rgb(243, 68, 243); text-shadow: black 0px 0px 1px, rgb(255, 223, 0) 0px 0px 10px, rgb(255, 223, 0) 0px 0px 20px;">iWordnet</h1><br>
+      <h1 id="_IWN_name_" onclick="javascript:IWN_txt_cool()"
+        style="color: rgb(243, 68, 243); text-shadow: black 0px 0px 1px, rgb(255, 223, 0) 0px 0px 10px, rgb(255, 223, 0) 0px 0px 20px;">
+        iWordnet</h1><br>
       <p style="font-size: large">Visual English Thesaurus App</p>
     </div>
   </section>
@@ -64,7 +259,8 @@
         <h2 class="h2_title" style="
       color: #f246fa;
   ">Rich Content</h2>
-        <p class="boxp">iWordnet carries a copy of <a href="https://wordnet.princeton.edu/" href="a large lexical English database (external link)">Princeton
+        <p class="boxp">iWordnet carries a copy of <a href="https://wordnet.princeton.edu/"
+            href="a large lexical English database (external link)">Princeton
             University
             Wordnet↗</a> V3.1 in heart.</p>
       </div>
@@ -95,7 +291,8 @@
         <h2 class="h2_title" style="
       color: #ff9200;
   ">Text To Speech</h2>
-        <p>System generated text to speech when pronunciation matter <sup title="May need an internet connection" style="font-size: xx-small; cursor: help">[1]</sup></p>
+        <p>System generated text to speech when pronunciation matter <sup title="May need an internet connection"
+            style="font-size: xx-small; cursor: help">[1]</sup></p>
       </div>
 
       <div class="box">
@@ -112,14 +309,52 @@
   <section id="soc_sec">
     <h3>Follow us</h3>
     <a href="https://twitter.com/iWordnet"><img alt="twitter icon" src="./sst_twitter.png" class="icon" /></a>
+    <a href="https://www.instagram.com/iwordnetapp/"><img alt="instagram icon" src="./insta.png" class="icon" /></a>
   </section>
 
   <section class="showcase">
-    <h2>Screenshots</h2> Soon...
+    <h2>Screenshots</h2>
+    <h3>iPhone (XR)</h3>
+    <hr style="border: 2px solid #f83ee4;" />
+    <div id="___IWN_SCREEN_CN">
+
+    </div>
+    <h3>iPad (Air)</h3>
+    <hr style="    border: 2px solid #81cbfe;" />
+    <div id="___IWN_SCREEN_CN_IP">
+
+    </div>
+  </section>
+  <br />
+  <section id="_i_compare" style="text-align: center">
+    <h3>Premium Features</h3>
+    <p>iWordnet comes with limited data and features. Go premium if you want more dedicated learning experience.</p>
+    <table style="min-width: 200px;
+    margin: auto;
+    border: 2px solid #9700ff;
+    border-radius: 1em;">
+      <tr style="font-weight: bold" class="_tr0">
+        <td></td>
+        <td>Free</td>
+        <td>Premium</td>
+      </tr>
+      <tr class="_tr0 _tr0_0">
+        <td class="_td0">X</td>
+        <td class="_td0">A</td>
+        <td class="_td0">Z</td>
+      </tr>
+      <tr class="_tr0 _tr0_1">
+        <td class="_td0">X</td>
+        <td class="_td0">A</td>
+        <td class="_td0">Z</td>
+      </tr>
+    </table>
+
   </section>
 
   <footer>
-    <p style="padding: 0px">Copyright © 2017-2019 <a href="./arashi.html">Arash M. Dehghani</a>. All rights reserved.</p>
+    <p style="padding: 0px">Copyright © 2017-2019 <a href="./arashi.html">Arash M. Dehghani</a>. All rights reserved.
+    </p>
     <p style="padding: 0px"><a href="./cp_lic_att.html">Copyright, Licenses, and attributions</a></p>
   </footer>
 

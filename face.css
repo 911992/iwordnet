@@ -5,6 +5,26 @@ a:link,a:visited{
 .boxp{
   margin-top: 1px;
 }
+#___IWN_SCREEN_CN,#___IWN_SCREEN_CN_IP{
+  /* overflow-x: auto;
+  max-width: 1vh; */
+  /* overflow: auto;
+overflow-y: hidden; */
+display: flex;
+    overflow-x: auto;
+    align-items: center;
+}
+._iwn_screen_a{
+margin: 3px 15px 3px 15px;
+}
+._iwn_screen_img{
+  /* margin: 3px 10px 3px 10px; */
+  /* border-width: 0.3em;
+  border-style: solid;
+  border-radius: 0.5em;
+  box-sizing: border-box; */
+  min-width: 200px;
+}
 #IWN_logo{
   margin-top: 30px;
   border-radius: 6px;
@@ -28,6 +48,7 @@ a:link,a:visited{
   background-repeat: no-repeat;
   /* background-image: url('./theme_light_bg0_icon4.png'); */
   background-image: url('./theme_light_bg0_icon4_W.png');
+  /* background-image: url('./def_back_bg_wavy0.png'); */
 }
 
 body{
@@ -168,7 +189,15 @@ header a:hover{
   border-bottom-color: rgba(78, 95, 254, 0.6);
   /* color: #ffde00; */
 }
-#soc_sec,#dl_sec{
+#_i_compare{
+  
+background: rgb(244, 228, 255);
+  
+border-top-color: rgb(187, 228, 255);
+  
+border-bottom-color: rgb(221, 253, 183);
+}
+#soc_sec,#dl_sec,#_i_compare{
   padding: 1em;
   text-align: center;
   border-width: 3px;
@@ -280,7 +309,18 @@ footer {
   header {
    padding-bottom: 20px; 
   }
-  
+  ._tr0{
+    color: yellow;
+  }
+  ._tr0_0{
+    color: blue;
+  }
+  ._tr0_1{
+    color: red;
+  }
+  ._td0{
+    padding: 2px;
+  }
   #showcase h1 {
     margin-top: 40px;
   }
