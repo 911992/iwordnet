@@ -1,0 +1,22 @@
+{
+    "things": [
+        {
+            "id": "001",
+            "ts": "1551092638" /*2019-02-25 14:33:58*/,
+            "title": "Releasing countdown",
+            "msg": "Releasing is so near..."
+        },
+        {
+            "id": "002",
+            "ts": "1551129966",
+            "title": "Messaging test",
+            "msg": "Test message"
+        },
+        {
+            "id": "003",
+            "ts": "1551167436",
+            "title": "Messaging test 1",
+            "msg": "Test message 1"
+        }
+    ]
+}
