@@ -4,19 +4,19 @@
             "id": "001",
             "ts": "1551092638",
             "title": "Releasing countdown",
-            "msg": "Releasing is so near..."
+            "msg": "TWVzc2FnZSB3aXRoCmEgbGluZWZlZWQKQ09PTCE="
         },
         {
             "id": "002",
             "ts": "1551129966",
             "title": "Messaging test",
-            "msg": "Test message"
+            "msg": "VGVzdCBtZXNzYWdlICEhIFRFU1QKVEVTVCBAQCAiICI="
         },
         {
             "id": "003",
             "ts": "1551167436",
             "title": "Messaging test 1",
-            "msg": "Test message 1"
+            "msg": "VGVzdCBtZXNzYWdlIDE="
         }
     ]
 }
