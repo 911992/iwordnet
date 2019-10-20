@@ -1,0 +1,147 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>The HTML5 Herald</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="SitePoint">
+    <style>
+        * {
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+    <script>
+        /*from https://www.w3schools.com/js/js_cookies.asp*/
+        /**************************************************/
+        function getCookie(cname) {
+            var name = cname + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var ca = decodedCookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+        function setCookie(cname, cvalue, exdays) {/*from https://www.w3schools.com/js/js_cookies.asp*/
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            var expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires;
+        }
+
+        function loadDoc(url, cFunction) {/*from https://www.w3schools.com/js/tryit.asp?filename=tryjs_ajax_callback*/
+            var xhttp;
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    cFunction(this);
+                }
+            };
+            xhttp.open("GET", url, true);
+            xhttp.send();
+        }
+
+        /**************************************************/
+        var G_HEADER_TEMP = "/*\n *  <<^^__WAsys_FILE_NAME__>>.h\n *\n *  Created on: <<^^__WAsys_CURRENT_TIMESTAMP__>>\n *      Author: <<^^__WAsys_DEV__>>\n */\n\n#ifndef __<<^^__WAsys_FILE_NAME__>>__H_\n#define __<<^^__WAsys_FILE_NAME__>>__H_\n\n#ifdef __cplusplus\nextern \"C\" {\n#endif\n\n\n/***********************************************/\n/* - - - - - - - include - begin - - - - - - - */\n\n\n/* - - - - - - - include - - end - - - - - - - */\n/***********************************************/\n\n\n/**********************************************/\n/* - - - - - - - Macros - begin - - - - - - - */\n\n\n/* - - - - - - - Macros - - end - - - - - - - */\n/**********************************************/\n\n\n/*********************************************/\n/* - - - - - - - types - begin - - - - - - - */\n\n\n/* - - - - - - - types - - end - - - - - - - */\n/*********************************************/\n\n\n/*****************************************************/\n/* - - - - - - - Externed vars - begin - - - - - - - */\n\n\n/* - - - - - - - Externed vars - - end - - - - - - - */\n/*****************************************************/\n\n\n/*************************************************/\n/* - - - - - - - Functions - begin - - - - - - - */\n\n\n/* - - - - - - - Functions - - end - - - - - - - */\n/*************************************************/\n\n#ifdef __cplusplus\n}\n#endif\n\n#endif /* __<<^^__WAsys_FILE_NAME__>>__H_ */\n";;
+        var G_SOURCE_TMP = "/*\n * <<^^__WAsys_FILE_NAME__>>.c\n *\n *  Created on: <<^^__WAsys_CURRENT_TIMESTAMP__>>\n *      Author: <<^^__WAsys_DEV__>>\n */\n\n\n#ifdef __cplusplus\nextern \"C\" {\n#endif\n\n/***********************************************/\n/* - - - - - - - include - begin - - - - - - - */\n#include \"<<^^__WAsys_FILE_NAME__>>.h\"\n/* - - - - - - - include - - end - - - - - - - */\n/***********************************************/\n\n\n/*************************************************/\n/* - - - - - - - variables - begin - - - - - - - */\n\n/* - - - - - - - variables - - end - - - - - - - */\n/*************************************************/\n\n\n/***************************************************/\n/* - - - - - - - static func - begin - - - - - - - */\n\n/* - - - - - - - static func - - end - - - - - - - */\n/***************************************************/\n\n\n/*************************************************/\n/* - - - - - - - Functions - begin - - - - - - - */\n\n/* - - - - - - - Functions - - end - - - - - - - */\n/*************************************************/\n\n\n\n#ifdef __cplusplus\n}\n#endif\n";
+        var G_dev_name;
+        var NAME_C_NAME = "_____WAsys_c_source_generator_dname";
+        console.log("Please report issues/enhancements/etc to https://github.com/911992/911992.github.io or https://github.com/911992/WAsys_source_header_file_template");
+
+        var G_FN_PLACE = "<<^^__WAsys_FILE_NAME__>>";
+        var G_DEV_PLACE = "<<^^__WAsys_DEV__>>";
+        var G_TS_PLACE = "<<^^__WAsys_CURRENT_TIMESTAMP__>>";
+        function gen() {
+            var _fname = document.getElementById('_fn').value;
+            var _timestamp = document.getElementById('_dt').value;
+            var _devname = document.getElementById('_dn').value;
+            var _h = G_HEADER_TEMP;
+            var _c = G_SOURCE_TMP;
+            var _res = [_h, _c];
+            var _resi = ['_htf', '_ctf'];
+            var _plc = [G_FN_PLACE, G_DEV_PLACE, G_TS_PLACE];
+            var _plcr = [_fname, _devname, _timestamp];
+            var _a;
+            var _m;
+            for (_a = 0; _a < _res.length; _a++) {
+                for (_b = 0; _b < _plc.length; _b++) {
+                    while (_res[_a].indexOf(_plc[_b]) > 0) {
+                        _res[_a] = _res[_a].replace(_plc[_b], _plcr[_b]);
+                    }
+                }
+                /*                document.getElementById(_resi[_a]).innerHTML = '<![CDATA[' + _res[_a] + ']]>';*/
+                document.getElementById(_resi[_a]).innerHTML = _res[_a];
+            }
+
+
+        }
+
+        function _init() {
+            load_dev_name_c();
+            timestamp_tick_loop();
+
+        }
+
+        function load_dev_name_c() {
+            G_dev_name = getCookie(NAME_C_NAME);
+            document.getElementById('_dn').value = G_dev_name;
+        }
+        function save_dev_name_c() {
+            setCookie(NAME_C_NAME, G_dev_name, 911);
+        }
+        function update_dev_name_c(arg_dev_name) {
+            G_dev_name = arg_dev_name;
+            save_dev_name_c();
+        }
+        function timestamp_tick_loop() {
+            var _date = new Date();
+            var _sys_ts = document.getElementById('_sysdt').checked;
+            if (_sys_ts) {
+                timestamp_tick_sys_update(_date);
+            }
+            setTimeout(timestamp_tick_loop, 1024);/*because 1000 is too mainstream :D*/
+        }
+        function timestamp_tick_sys_update(arg_date) {
+            /*from https://tecadmin.net/get-current-date-time-javascript/*/
+            var _date = arg_date.getFullYear() + '-' + (arg_date.getMonth() + 1) + '-' + arg_date.getDate();
+            var _time = arg_date.getHours() + ":" + arg_date.getMinutes() + ":" + arg_date.getSeconds();
+            var _date_time = _date + ' ' + _time;
+            /*************************************************************/
+            document.getElementById('_dt').value = _date_time;
+        }
+
+
+    </script>
+</head>
+
+<body onload="_init()">
+    <p><label>File name(without extention) <input id="_fn" /></label></p>
+    <p><label>Your Name <input id="_dn" onblur="update_dev_name_c(this.value)"
+                onchange="update_dev_name_c(this.value)" /></label></p>
+    <p>
+        <label>Creation datetime <input id="_dt" /></label>
+        <label><input checked="checked" onchange="javascript:if(this.checked){timestamp_tick_sys_update(new Date());}"
+                type="checkbox" id="_sysdt" />Current timestamp</label>
+    </p>
+    <p><button onclick="gen()">Generate</button></p>
+    <p><span>Header file:</span><br />
+
+        <textarea style="width: 100%;box-sizing: border-box;border:1px solid #80ff00" rows="10" id="_htf"></textarea>
+    </p>
+    <p><span>Source file:</span><br />
+        <textarea style="width: 100%;box-sizing: border-box;border:1px solid #80ff00" rows="10" id="_ctf"></textarea>
+    </p>
+
+    <p><a href="https://github.com/911992/WAsys_source_header_file_template">Repo</a></p>
+</body>
+
+</html>
