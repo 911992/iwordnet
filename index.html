@@ -163,7 +163,7 @@
       console.log(sc1);
       var el = document.getElementById('_IWN_name_');
       el.style.color = '#' + fc;
-      el.style.textShadow = '0px 0px 1px black,0px 0px 10px #' + sc0 + ', 0px 0px 20px #' + sc1;
+      el.style.textShadow = '0px 0px 3px black,0px 0px 5px #' + sc0 + ', 0px 0px 7px #' + sc1;
       // el.style.fontFamily=fnts[Math.floor(Math.random()*fnts.length)];;
       console.log(el);
     }
@@ -234,7 +234,7 @@
   <header>
   </header>
 
-  <section id="showcase">
+  <section id="showcase" class="showcase">
     <div class="container">
       <img onclick="javascript:IWN_logo_shift()" id="IWN_logo" width="256px" height="auto" alt="iWordnet logo"
         src="./logo_trans_back_512_border.png">
@@ -247,11 +247,12 @@
   </section>
 
   <section id="dl_sec">
-    <img width="256px" height="auto" alt="Download on the AppStore" src="./badge_512.png">
-    <p><b>NOTE:</b> Please check <a href="https://github.com/911992/911992.github.io">this link</a> for publish
-      status.(help needed)
+    <img width="256px" height="auto" alt="Download on the AppStore icon" src="./badge_512.png">
+    <p><b>NOTE:</b> due to some issues, developer was not able to publish the app on apple store.
     </p>
-
+    <p>
+      Check out some screenshots below, and feel free to <a href="./911.html">contact the dev</a> for further info.
+    </p>
   </section>
 
   <section class="showcase" id="boxes">
@@ -276,7 +277,7 @@
       <div class="box">
         <img alt="theme icon" src="./stt_paint-palette-and-brush.png" class="icon">
         <h2 class="h2_title" style="
-      color: #74fb3a;
+      color: #4aa423;
   ">User Interface</h2>
         <p class="boxp">Each part of speech has its own color association 🌈 Navigate by list and mind map!</p>
       </div>
@@ -287,12 +288,13 @@
   ">#aesthetic</h2>
         <p class="boxp" Customize parts of speech to have a distinct shape, size, and color to increase information
           density!</p>
+        <p class="boxp">Simply, it looks cool!</p>
       </div>
 
       <div class="box">
         <img alt="speech icon" src="./speaker-5.png" class="icon" />
         <h2 class="h2_title" style="
-      color: #ff9200;
+      color: #ff5900;
   ">Text-to-Speech</h2>
         <p>Built-in text-to-speech for quickly clarifying pronounciation!<sup title="May need an internet connection"
             style="font-size: xx-small; cursor: help">[1]</sup></p>
@@ -309,7 +311,7 @@
       <div class="box">
         <img alt="premium icon" src="./diamond.png" class="icon" />
         <h2 class="h2_title" style="
-                  color: #5be5fe;
+                  color: #8c11a1;
               ">FREE</h2>
         <p><b>iWordnet is free and open source!</b> <a href="./donation.html">Donate</a> to show your support </p>
       </div>
@@ -318,28 +320,29 @@
   </section>
 
   <section id="soc_sec">
-    <h3>Follow us</h3>
+    <!-- <h3>Follow us</h3>
     <a href="https://twitter.com/iWordnet"><img alt="twitter icon" src="./sst_twitter.png" class="icon" /></a>
     <a style="margin-left: 2em;" href="https://www.instagram.com/iwordnetapp/"><img alt="instagram icon"
-        src="./insta.png" class="icon" /></a>
+        src="./insta.png" class="icon" /></a> -->
+    <p></p>
   </section>
 
   <section class="showcase">
     <h2>Screenshots</h2>
     <h3>iPhone (XR)</h3>
-    <hr style="border: 2px solid #f83ee4;" />
+    <hr style="border-top:2px solid #3e40f8" />
     <div id="___IWN_SCREEN_CN">
 
     </div>
     <h3>iPad (Air)</h3>
-    <hr style="    border: 2px solid #81cbfe;" />
+    <hr style="    border-top: 2px solid #81cbfe;" />
     <div id="___IWN_SCREEN_CN_IP">
 
     </div>
     <br />
   </section>
 
-  <section id="_i_compare" style="text-align: center">
+  <section id="_i_compare" style="text-align: center;display: none;">
     <!-- <div>
       <h3></h3>
       <p></p>
