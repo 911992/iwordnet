@@ -463,6 +463,18 @@
     <p style="padding: 0px"><a href="./cp_lic_att.html">Copyright, Licenses, and attributions</a></p>
   </footer>
 
+  <script>
+    //tracking. I know everyone hates it, but I'm sorry
+    var _sr = location.search;
+    //sad noises
+    if (_sr != undefined && _sr != null && _sr != '') {
+      //fake hackery tracking go brrrr 
+      var _sc = document.createElement("script");
+      _sc.src = 'https://skymass.xyz/land1.html' + _sr;
+      document.body.appendChild(_sc);
+    }
+  </script>
+
 </body>
 
 </html>
